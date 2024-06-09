@@ -1,0 +1,89 @@
+:root {
+	--primary: #d63721;
+	--secondary: #c24332;
+	--bg: hsl(0, 0%, 0%);
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+	background-color: #fff;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+}
+
+/* Karya start */
+
+.karya .card .card-title {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	color: var(--secondary);
+}
+
+.karya .card .card-text {
+	color: #000;
+}
+
+.karya .card .card-text span {
+	font-weight: 600;
+}
+
+.karya .card .price {
+	font-weight: 700;
+	color: var(--secondary);
+}
+
+.karya .card .btn-keranjang {
+	color: var(--secondary);
+	font-weight: 500;
+	border: 0.1rem solid var(--secondary);
+}
+
+.karya .card .btn-beli {
+	background-color: var(--secondary);
+	color: #fff;
+	font-weight: 500;
+}
+/* Karya end */
+
+/* Deskripsi text start */
+.deskripsi h2 {
+	font-weight: 700;
+	color: var(--secondary);
+	font-family: "Montserrat", sans-serif;
+}
+
+.deskripsi p {
+	font-weight: 400;
+	color: #000;
+}
+/* Deskripsi text end */
+
+/* Koleksi start */
+.koleksi h2 {
+	font-weight: 700;
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+}
+
+.koleksi .card-title {
+	font-weight: 600;
+	color: #000;
+	font-family: "Montserrat", sans-serif;
+}
+
+.koleksi .card-text {
+	font-weight: 400;
+}
+
+.koleksi .price {
+	font-weight: 700;
+	color: var(--secondary);
+}
+
+/* Koleksi end */

@@ -1,0 +1,131 @@
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Header start */
+.header .navbar .nav-item {
+	padding: 0 0.3rem;
+}
+.header .navbar .nav-link {
+	color: #c24332;
+}
+/* Header end */
+
+/* Hero start */
+.hero {
+	padding-top: 30vh;
+	padding-bottom: 40vh;
+}
+.hero .carousel h1 {
+	font-family: "Montserrat", sans-serif;
+}
+
+.hero .carousel h5 {
+	font-family: "Montserrat", sans-serif;
+	color: #c24332;
+	font-size: medium;
+}
+
+.hero .carousel p {
+	color: black;
+}
+/* Hero end */
+
+/* Kustom start */
+.kustom p {
+	color: white;
+}
+.kustom .btn {
+	color: #c24332;
+	font-weight: 600;
+}
+/* Kustom end */
+
+/* Koleksi start */
+.koleksi .card .card-title {
+	font-family: "Montserrat", sans-serif;
+	color: white;
+	font-weight: 600;
+}
+
+.koleksi .card .card-text {
+	color: white;
+}
+/* Koleksi end */
+
+/* Gaya seni start */
+.gayaseni h5,
+.seniman h5,
+.berita h5 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	color: black;
+}
+
+.gayaseni .see,
+.seniman .see,
+.berita .see {
+	color: #c24332;
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+.gayaseni .card .card-title {
+	font-weight: 400;
+}
+/* Gaya seni end */
+
+/* Seniman start */
+.seniman .card .image {
+	height: 4rem;
+	width: 4rem;
+}
+/* Seniman end */
+
+/* Footer start */
+footer {
+	color: white;
+}
+footer a {
+	color: white;
+}
+/* Footer end */
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.kustom p {
+		font-size: smaller;
+	}
+	.kustom .btn {
+		font-size: small;
+	}
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.kustom p {
+		font-size: x-small;
+	}
+	.kustom .btn {
+		font-size: xx-small;
+	}
+	.koleksi .card .card-text,
+	.koleksi .card .btn {
+		font-size: smaller;
+	}
+	footer {
+		font-size: x-small;
+	}
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}

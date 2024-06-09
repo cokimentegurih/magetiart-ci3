@@ -1,0 +1,23 @@
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.header h5 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	color: #c24332;
+}
+
+.card .card-title {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	color: #c24332;
+}
+
+.card p {
+	color: #818181;
+}

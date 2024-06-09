@@ -1,0 +1,111 @@
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body h5,
+h6 {
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Header start */
+.header h5 {
+	font-weight: 500;
+	color: #c24332;
+}
+/* Header end */
+
+/* Hero start */
+.hero table th {
+	color: #818181;
+}
+
+.hero table h5 {
+	color: #c24332;
+	font-size: medium;
+}
+
+.hero table button {
+	border: none;
+}
+
+.hero table .quantity {
+	width: 25%;
+}
+
+.hero .card-title {
+	font-family: "Montserrat", sans-serif;
+}
+/* Hero end */
+
+/* Footer start */
+footer {
+	color: black;
+}
+.container-fluid {
+	background-color: white;
+}
+
+footer h5 {
+	font-weight: 600;
+}
+
+footer .btn {
+	background-color: #c24332;
+	color: white;
+}
+/* Footer end */
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.hero table {
+		font-size: smaller;
+	}
+
+	.hero table h5 {
+		font-size: smaller;
+	}
+
+	.hero table .icon {
+		width: 1.5rem;
+	}
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.hero table {
+		font-size: x-small;
+	}
+
+	.hero table .icon {
+		width: 1rem;
+	}
+
+	footer h5 {
+		font-size: medium;
+	}
+
+	footer .btn {
+		font-size: small;
+	}
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.hero table .quantity {
+		/* align-items: center; */
+		display: grid;
+		width: 100%;
+		padding: 12vh 0;
+	}
+	footer h5 {
+		font-size: small;
+	}
+
+	footer p {
+		font-size: small;
+	}
+}

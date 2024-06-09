@@ -1,0 +1,112 @@
+:root {
+	--primary: #d63721;
+	--secondary: #c24332;
+	--bg: hsl(0, 0%, 0%);
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #fff;
+}
+
+/* Hero start */
+.hero .nav-bg {
+	padding: 5rem 8rem;
+	background-size: 100% 50%;
+}
+
+.hero .card .profile-data {
+	color: #fff;
+}
+
+.hero .name {
+	font-weight: 700;
+	color: #fff;
+}
+
+.hero .place {
+	font-weight: 600;
+}
+
+.hero .profile .card-title {
+	font-weight: 700;
+	color: #c24332;
+}
+
+.hero .profile .card-text span {
+	font-weight: 700;
+}
+
+.hero .row-profil .card-text span {
+	font-weight: 700;
+}
+/* Hero end */
+
+/* Koleksi start */
+.koleksi h5 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	color: black;
+}
+
+.koleksi .card .price {
+	color: #c24332;
+	font-weight: 700;
+}
+
+.koleksi .card .btn-detail {
+	color: #fff;
+	background-color: #c24332;
+}
+
+.koleksi .card .image {
+	max-height: 25vh;
+	overflow-y: hidden;
+}
+/* Koleksi end */
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.koleksi .card .image {
+		max-height: 45vh;
+		text-align: center;
+	}
+	.koleksi .card .card-body {
+		text-align: center;
+	}
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.hero .nav-bg {
+		background-size: 100% 25%;
+	}
+	.hero .card .profile-data {
+		color: black;
+	}
+	.hero .name {
+		color: #c24332;
+	}
+	.hero .card .card-body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+	.hero .nav-bg {
+		padding: 5rem 2rem;
+	}
+}

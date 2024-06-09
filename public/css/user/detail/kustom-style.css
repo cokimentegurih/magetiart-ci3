@@ -1,0 +1,157 @@
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body h5,
+h6 {
+	font-family: "Montserrat", sans-serif;
+}
+/* Header start */
+.header h5 {
+	font-weight: 500;
+	color: #c24332;
+}
+/* Header end */
+
+/* Hero start */
+.hero {
+	padding: 8rem 15rem;
+}
+
+.hero .text {
+	color: black;
+}
+
+.hero .text h5 {
+	font-weight: 500;
+}
+
+.hero .text p {
+	font-weight: 400;
+	text-align: justify;
+}
+
+.hero .card {
+	border-radius: var(--bs-card-inner-border-radius);
+}
+
+.hero .card-img {
+	height: 25vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.hero .card .card-title {
+	font-weight: 700;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+	padding: 10px 0;
+}
+
+.hero .card .bg-title {
+	background-color: #c24332;
+	border-radius: var(--bs-card-inner-border-radius);
+}
+
+.hero .list-group h5 {
+	font-weight: 700;
+	font-size: large;
+}
+
+.hero .list-group h6 {
+	font-weight: 400;
+	font-size: medium;
+}
+
+.hero .list-group-item {
+	border: none;
+}
+
+.hero .btn {
+	background-color: #c24332;
+	color: white;
+	font-size: small;
+}
+
+.hero .card .image {
+	height: 50vh;
+}
+
+/* Hero end */
+
+/* // `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+	.hero {
+		padding: 8rem 10rem;
+	}
+
+	.hero .card .image {
+		height: 40vh;
+	}
+}
+
+/* // `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+	.hero {
+		padding: 8rem 5rem;
+	}
+	.hero .card-img {
+		height: 20vh;
+	}
+	.hero .card .card-title {
+		font-size: medium;
+	}
+
+	.hero .list-group h5 {
+		font-size: medium;
+	}
+
+	.hero .list-group h6 {
+		font-size: small;
+	}
+}
+
+/* // `md` applies to small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+	.hero {
+		padding: 7rem 3rem;
+	}
+	.hero .row-card {
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+	.hero .card-img {
+		height: 30vh;
+		background-position: center;
+	}
+	.hero .card .card-title {
+		font-size: small;
+	}
+
+	.hero .list-group h5 {
+		font-size: small;
+	}
+
+	.hero .list-group h6 {
+		font-size: smaller;
+	}
+}
+
+/* // `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	.hero .row-card {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.hero .card-img {
+		height: 25vh;
+	}
+
+	.hero .card .image {
+		height: 20vh;
+	}
+}
