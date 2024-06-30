@@ -81,7 +81,7 @@
                             <div class="row mb-3">
                                 <label for="quantity" class="col-sm-2 col-form-label">Jumlah</label>
                                 <div class="col-sm-9">
-                                    <input type="number" class="form-control <?= (form_error('quantity')) ? 'is-invalid' : ''; ?>" id="quantity" name="quantity" value="<?= set_value('quantity'); ?>">
+                                    <input type="number" class="form-control <?= (form_error('quantity')) ? 'is-invalid' : ''; ?>" id="quantity" name="quantity" min=0 oninput="validity.valid||(value='');" value="<?= set_value('quantity'); ?>">
                                     <?= form_error('quantity', '<small class="text-danger pl-3">', '</small>'); ?>
                                 </div>
                             </div>
