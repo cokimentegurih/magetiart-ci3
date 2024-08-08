@@ -48,7 +48,7 @@
                                 Tahun: <?= $art['year']; ?> <br />
                                 Material: <?= $art['material']; ?> <br />
                                 Ukuran: <?= $art['width']; ?> x <?= $art['height']; ?> cm <br />
-                                Jumlah: <?= ($art['quantity'] > 0) ? 'Jumlah : ' . $art['quantity'] : 'Sold Out'; ?>
+                                Jumlah: <?= ($art['quantity'] > 0) ? $art['quantity'] : 'Sold Out'; ?>
                             </p>
                             <p class="price fs-4"><?= $art['price']; ?></p>
                             <div class="row row-button">

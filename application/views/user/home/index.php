@@ -4,71 +4,81 @@
         <div class="row py-1 py-sm-2 py-md-3 align-items-center">
             <div class="col">
                 <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid justify-content-between">
+                    <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                             <div>
                                 <img src="<?= base_url('public/img/template/navbar-logo.png'); ?>" class="img-fluid me-2">
                             </div>
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-                            <form action="<?= base_url('Produk'); ?>" method="post" class="d-flex my-3" role="search">
-
-                                <input class="form-control me-2" type="search" placeholder="Cari produk" aria-label="Search" name="keyword">
-                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search p-2"></i></button>
-                            </form>
-
-                            <div class="row">
-                                <div class="col">
-                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-end align-items-lg-center">
-                                        <li class="nav-item mb-2">
-                                            <a class="nav-link active" href="<?= base_url('Produk'); ?>">Produk</a>
-                                        </li>
-                                        <li class="nav-item mb-2">
-                                            <?php if ($this->session->userdata('cart')) : ?>
-                                                <span class="ms-3 ms-lg-4 rounded-circle text-center" style="position: absolute; background-color: #C24332; background-position: center; height: 15px; width: 15px; font-size: x-small; color: white;">
-                                                    <?= $items; ?>
-                                                </span>
-                                            <?php endif; ?>
-                                            <a class="nav-link" href="<?= base_url('Keranjang'); ?>">
-                                                <img src="<?= base_url('public/img/template/shopping-cart.svg'); ?>">
-                                            </a>
-                                        </li>
-                                        <li class="nav-item mb-2">
-                                            <?php if ($this->session->userdata('notifs')) : ?>
-                                                <span class="ms-3 ms-lg-4 rounded-circle text-center" style="position: absolute; background-color: #C24332; background-position: center; height: 15px; width: 15px; font-size: x-small; color: white;">
-                                                    <?= count($this->session->userdata('notifs')); ?>
-                                                </span>
-                                            <?php endif; ?>
-                                            <a class="nav-link" href="<?= base_url('Home/notification'); ?>">
-                                                <img src="<?= base_url('public/img/template/bell.svg'); ?>">
-                                            </a>
-                                        </li>
-                                        <li class="nav-item mb-2">
-                                            <div class="rounded-circle overflow-hidden" style="height: 3vw; width: 3vw;">
-                                                <?php if ($user) : ?>
-                                                    <a class="nav-link p-0 " href="<?= base_url('Admin'); ?>" target="_blank">
-                                                        <img class="img-fluid" src="<?= base_url('public/img/admin/user/' . $user['image']); ?>">
-                                                    </a>
-                                                <?php else : ?>
-                                                    <img class="img-fluid" src="<?= base_url('public/img/template/blank-profile-picture.jpg'); ?>">
-                                                <?php endif; ?>
-
-                                            </div>
-                                        </li>
-
-                                        <?php if (!$user) : ?>
-                                            <li class="nav-item mb-2">
-                                                <div class="rounded-pill px-3" style="background-color: #c24332;">
-                                                    <a class="nav-link" href="<?= base_url('Auth'); ?>" style="color: white;"><i class="bi bi-box-arrow-right"></i> Login</a>
-                                                </div>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MagetiArt</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body align-items-center justify-content-between px-5 px-lg-0">
+                                <form action="<?= base_url('Produk'); ?>" method="post" class="d-flex my-3" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Cari produk" aria-label="Search" name="keyword">
+                                    <button class="btn btn-outline-danger" type="submit"><i class="bi bi-search p-2"></i></button>
+                                </form>
+                                <div class="row me-2">
+                                    <div class="col">
+                                        <ul class="navbar-nav align-items-center">
+                                            <li class="nav-item mx-2 mb-2">
+                                                <a class="nav-link active" href="<?= base_url('Produk'); ?>">Produk</a>
                                             </li>
-                                        <?php endif; ?>
-                                    </ul>
+                                            <li class="nav-item mx-2 mb-2">
+                                                <?php if ($this->session->userdata('cart')) : ?>
+                                                    <span class="ms-3 ms-lg-4 rounded-circle text-center" style="position: absolute; background-color: #C24332; background-position: center; height: 15px; width: 15px; font-size: x-small; color: white;">
+                                                        <?= $items; ?>
+                                                    </span>
+                                                <?php endif; ?>
+                                                <a class="nav-link" href="<?= base_url('Keranjang'); ?>">
+                                                    <img src="<?= base_url('public/img/template/shopping-cart.svg'); ?>">
+                                                    <span class="d-lg-none ms-3">Keranjang</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item mx-2 mb-2" style="position: relative;">
+                                                <?php if ($this->session->userdata('notifs')) : ?>
+                                                    <span class="ms-3 ms-lg-4 rounded-circle text-center" style="position: absolute; background-color: #C24332; left: 2px; top: 4px;  height: 15px; width: 15px; font-size: x-small; color: white;">
+                                                        <?= count($this->session->userdata('notifs')); ?>
+                                                    </span>
+                                                <?php endif; ?>
+                                                <a class="nav-link" href="<?= base_url('Home/notification'); ?>">
+                                                    <img src="<?= base_url('public/img/template/bell.svg'); ?>">
+                                                    <span class="d-lg-none ms-3">Notifikasi</span>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item mx-2 mb-4 mb-lg-2 d-flex align-items-center">
+                                                <div class="rounded-circle overflow-hidden" style="height: 3vw; width: 3vw; min-height: 3rem; min-width: 3rem;">
+                                                    <?php if ($user) : ?>
+                                                        <a class="nav-link p-0 " href="<?= base_url('Admin'); ?>" target="_blank">
+                                                            <img class="img-fluid" src="<?= base_url('public/img/admin/user/' . $user['image']); ?>">
+                                                        </a>
+                                                    <?php else : ?>
+                                                        <img class="img-fluid" src="<?= base_url('public/img/template/blank-profile-picture.jpg'); ?>">
+                                                    <?php endif; ?>
+
+                                                </div>
+                                                <span class="d-lg-none ms-3"> Profil Akun</span>
+                                            </li>
+
+                                            <?php if (!$user) : ?>
+                                                <li class="nav-item mb-2">
+                                                    <div class="rounded-pill px-3" style="background-color: #c24332;">
+                                                        <a class="nav-link" href="<?= base_url('Auth'); ?>" style="color: white;"><i class="bi bi-box-arrow-right"></i> Login</a>
+                                                    </div>
+                                                </li>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+
+
+
 
                         </div>
 
